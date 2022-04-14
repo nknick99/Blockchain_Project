@@ -40,7 +40,7 @@ function Login(props) {
     <Grid container className={classes.container}>
       <div className={classes.logotypeContainer}>
         <img src={logo} alt="logo" className={classes.logotypeImage} />
-        <Typography className={classes.logotypeText}>Material Admin</Typography>
+        <Typography className={classes.logotypeText}>Block Data</Typography>
       </div>
       <div className={classes.formContainer}>
         <div className={classes.form}>
@@ -57,7 +57,7 @@ function Login(props) {
           {activeTabId === 0 && (
             <React.Fragment>
               <Typography variant="h1" className={classes.greeting}>
-                Good Morning, User
+                Welcome, User
               </Typography>
               <Button size="large" className={classes.googleButton}>
                 <img src={google} alt="google" className={classes.googleIcon} />
@@ -182,6 +182,21 @@ function Login(props) {
                 fullWidth
               />
               <TextField
+                id="adharno"
+                InputProps={{
+                  classes: {
+                    underline: classes.textFieldUnderline,
+                    input: classes.textField,
+                  },
+                }}
+                value={loginValue}
+                onChange={e => setLoginValue(e.target.value)}
+                margin="normal"
+                placeholder="Aadhar No"
+                type="text"
+                fullWidth
+              />
+              <TextField
                 id="password"
                 InputProps={{
                   classes: {
@@ -245,7 +260,7 @@ function Login(props) {
           )}
         </div>
         <Typography color="primary" className={classes.copyright}>
-        © 2014-{new Date().getFullYear()} <a style={{ textDecoration: 'none', color: 'inherit' }} href="https://flatlogic.com" rel="noopener noreferrer" target="_blank">Flatlogic</a>, LLC. All rights reserved.
+          © {new Date().getFullYear()} <a style={{ textDecoration: 'none', color: 'inherit' }} href="#" rel="noopener noreferrer" target="_blank">Block Data</a>, All rights reserved.
         </Typography>
       </div>
     </Grid>
