@@ -17,6 +17,7 @@ import {
   Search as SearchIcon,
   Send as SendIcon,
   ArrowBack as ArrowBackIcon,
+  SettingsPower as SignOut,
 } from "@material-ui/icons";
 import classNames from "classnames";
 
@@ -137,11 +138,11 @@ export default function Header(props) {
           )}
         </IconButton>
         <Typography variant="h6" weight="medium" className={classes.logotype}>
-          React Material Admin
+          DataCard
         </Typography>
         <div className={classes.grow} />
-        <Button component={Link} href="https://flatlogic.com/templates/react-material-admin-full" variant={"outlined"} color={"secondary"} className={classes.purchaseBtn}>Unlock full version</Button>
-        <div
+        {/* <Button component={Link} href="https://flatlogic.com/templates/react-material-admin-full" variant={"outlined"} color={"secondary"} className={classes.purchaseBtn}>Unlock full version</Button> */}
+        {/* <div
           className={classNames(classes.search, {
             [classes.searchFocused]: isSearchOpen,
           })}
@@ -161,8 +162,8 @@ export default function Header(props) {
               input: classes.inputInput,
             }}
           />
-        </div>
-        <IconButton
+        </div> */}
+        {/* <IconButton
           color="inherit"
           aria-haspopup="true"
           aria-controls="mail-menu"
@@ -178,8 +179,8 @@ export default function Header(props) {
           >
             <NotificationsIcon classes={{ root: classes.headerIcon }} />
           </Badge>
-        </IconButton>
-        <IconButton
+        </IconButton> */}
+        {/* <IconButton
           color="inherit"
           aria-haspopup="true"
           aria-controls="mail-menu"
@@ -195,7 +196,7 @@ export default function Header(props) {
           >
             <MailIcon classes={{ root: classes.headerIcon }} />
           </Badge>
-        </IconButton>
+        </IconButton> */}
         <IconButton
           aria-haspopup="true"
           color="inherit"
@@ -297,40 +298,39 @@ export default function Header(props) {
               color="primary"
               href="https://flatlogic.com"
             >
-              Flalogic.com
+              Student/ Employer
             </Typography>
           </div>
-          <MenuItem
+          {/* <MenuItem
             className={classNames(
               classes.profileMenuItem,
               classes.headerMenuItem,
             )}
           >
             <AccountIcon className={classes.profileMenuIcon} /> Profile
-          </MenuItem>
-          <MenuItem
+          </MenuItem> */}
+          {/* <MenuItem
             className={classNames(
               classes.profileMenuItem,
               classes.headerMenuItem,
             )}
           >
             <AccountIcon className={classes.profileMenuIcon} /> Tasks
-          </MenuItem>
-          <MenuItem
+          </MenuItem> */}
+          {/* <MenuItem
             className={classNames(
               classes.profileMenuItem,
               classes.headerMenuItem,
             )}
           >
             <AccountIcon className={classes.profileMenuIcon} /> Messages
-          </MenuItem>
+          </MenuItem> */}
           <div className={classes.profileMenuUser}>
             <Typography
               className={classes.profileMenuLink}
               color="primary"
               onClick={() => signOut(userDispatch, props.history)}
-            >
-              Sign Out
+            > <SignOut/>
             </Typography>
           </div>
         </Menu>

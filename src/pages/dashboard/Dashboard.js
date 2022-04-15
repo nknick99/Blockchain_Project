@@ -25,6 +25,7 @@ import {
 // styles
 import useStyles from "./styles";
 
+
 // components
 import mock from "./mock";
 import Widget from "../../components/Widget";
@@ -51,15 +52,17 @@ export default function Dashboard(props) {
 
   return (
     <>
-      <PageTitle title="Dashboard" button={<Button
-      variant="contained"
-      size="medium"
-      color="secondary"
-    >
-        Latest Reports
-    </Button>} />
-      <Grid container spacing={4}>
-        <Grid item lg={3} md={4} sm={6} xs={12}>
+      <PageTitle title="Profile"
+      //   button={<Button
+      //   variant="contained"
+      //   size="medium"
+      //   color="secondary"
+      // >
+      //     Latest Reports
+      // </Button>}
+      />
+      <Grid container>
+        {/* <Grid item lg={3} md={4} sm={6} xs={12}>
           <Widget
             title="Visits Today"
             upperTitle
@@ -266,48 +269,13 @@ export default function Dashboard(props) {
               </div>
             </div>
           </Widget>
-        </Grid>
-        <Grid item lg={3} md={4} sm={6} xs={12}>
-          <Widget title="Revenue Breakdown" upperTitle className={classes.card}>
-            <Grid container spacing={2}>
-              <Grid item xs={6}>
-                <ResponsiveContainer width="100%" height={144}>
-                  <PieChart>
-                    <Pie
-                      data={PieChartData}
-                      innerRadius={30}
-                      outerRadius={40}
-                      dataKey="value"
-                    >
-                      {PieChartData.map((entry, index) => (
-                        <Cell
-                          key={`cell-${index}`}
-                          fill={theme.palette[entry.color].main}
-                        />
-                      ))}
-                    </Pie>
-                  </PieChart>
-                </ResponsiveContainer>
-              </Grid>
-              <Grid item xs={6}>
-                <div className={classes.pieChartLegendWrapper}>
-                  {PieChartData.map(({ name, value, color }, index) => (
-                    <div key={color} className={classes.legendItemContainer}>
-                      <Dot color={color} />
-                      <Typography style={{ whiteSpace: "nowrap", fontSize: 12 }} >
-                        &nbsp;{name}&nbsp;
-                      </Typography>
-                      <Typography color="text" colorBrightness="secondary">
-                        &nbsp;{value}
-                      </Typography>
-                    </div>
-                  ))}
-                </div>
-              </Grid>
-            </Grid>
+        </Grid> */}
+        <Grid item xs={12}>
+          <Widget>
+            
           </Widget>
         </Grid>
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
           <Widget
             bodyClass={classes.mainChartBody}
             header={
@@ -406,22 +374,13 @@ export default function Dashboard(props) {
               </ComposedChart>
             </ResponsiveContainer>
           </Widget>
-        </Grid>
-        {mock.bigStat.map(stat => (
+        </Grid> */}
+        {/* {mock.bigStat.map(stat => (
           <Grid item md={4} sm={6} xs={12} key={stat.product}>
             <BigStat {...stat} />
           </Grid>
-        ))}
-        <Grid item xs={12}>
-          <Widget
-            title="Support Requests"
-            upperTitle
-            noBodyPadding
-            bodyClass={classes.tableWidget}
-          >
-            <Table data={mock.table} />
-          </Widget>
-        </Grid>
+        ))} */}
+
       </Grid>
     </>
   );
